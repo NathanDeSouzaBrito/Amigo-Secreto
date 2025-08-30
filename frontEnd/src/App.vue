@@ -1,5 +1,8 @@
-<script setup></script>
+<template>
+  <Home />
+</template>
 
-<template></template>
-
-<style scoped></style>
+<script>
+import Home from "./view/Home.vue";
+export default { components: { Home } };
+</script>

@@ -1,12 +1,15 @@
 package com.secretFriend.service;
 
-import com.secretFriend.model.Person;
-import com.secretFriend.repository.PersonRepository;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 
-import java.util.*;
+import com.secretFriend.model.Person;
+import com.secretFriend.repository.PersonRepository;
 
 @Service
 public class SecretSantaService {
