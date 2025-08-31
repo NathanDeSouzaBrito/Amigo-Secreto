@@ -1,17 +1,65 @@
 <template>
-  <div>
-    <h1>Amigo Secreto 🎁</h1>
+  <main>
+    <div class="home">
+      <h1>Amigo Secreto 🎁</h1>
 
-    <PersonForm :onAdd="addPerson" />
-    <PersonList
-      :persons="persons"
-      :onDelete="removePerson"
-      :onUpdate="updatePerson"
-    />
+      <PersonForm :onAdd="addPerson" />
+      <PersonList
+        :persons="persons"
+        :onDelete="removePerson"
+        :onUpdate="updatePerson"
+      />
 
-    <button @click="draw">Sortear</button>
-  </div>
+      <button @click="draw">Sortear</button>
+    </div>
+  </main>
 </template>
+
+<style scoped>
+main {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  background-color: #121212;
+}
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 700px;
+  gap: 20px;
+  padding: 50px 0;
+  font-family: Arial, sans-serif;
+  border: 2px solid black;
+  border-radius: 10px;
+
+  background-color: #f9f9f9;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+
+  height: 35px;
+  width: 150px;
+
+  margin-left: 10px;
+  padding: 5px;
+
+  border: none;
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  font-size: 16px;
+  font-family: "Geologica", sans-serif;
+}
+</style>
 
 <script>
 import api from "../services/api";
